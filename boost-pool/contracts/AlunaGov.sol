@@ -179,10 +179,12 @@ contract AlunaGov is LPTokenWrapperWithSlash {
     function getQuorum(uint256 id) public view returns (uint256){
         // sum votes, multiply by precision, divide by square rooted total supply
         
+        uint256 totalSupply = proposals[id].totalSupply || AdditionalMath.sqrt(totalSupply())
+        
         uint256 _quorum = 
             (proposals[id].totalForVotes.add(proposals[id].totalAgainstVotes))
             .mul(PERCENTAGE_PRECISION)
-            .div(proposals[id].totalSupply);
+            .div(totalSupply);
 
         return _quorum;
     }

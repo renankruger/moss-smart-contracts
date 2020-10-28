@@ -182,7 +182,7 @@ contract AlunaGov is LPTokenWrapperWithSlash {
         uint256 _quorum = 
             (proposals[id].totalForVotes.add(proposals[id].totalAgainstVotes))
             .mul(PERCENTAGE_PRECISION)
-            .div(AdditionalMath.sqrt(totalSupply()));
+            .div(proposals[id].totalSupply);
 
         return _quorum;
     }

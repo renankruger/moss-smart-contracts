@@ -142,11 +142,7 @@ contract AlunaGov is LPTokenWrapperWithSlash {
         // update proposal total supply
         proposals[id].totalSupply = AdditionalMath.sqrt(totalSupply());
 
-        // sum votes, multiply by precision, divide by square rooted total supply
-        uint256 quorum = 
-            (proposals[id].totalForVotes.add(proposals[id].totalAgainstVotes))
-            .mul(PERCENTAGE_PRECISION)
-            .div(proposals[id].totalSupply);
+        uint256 quorum = getQuorum(id);
 
         if ((quorum < MIN_QUORUM_PUNISHMENT) && proposals[id].withdrawAmount > WITHDRAW_THRESHOLD) {
             // user's stake gets slashed, converted to stablecoin and sent to treasury
@@ -181,12 +177,13 @@ contract AlunaGov is LPTokenWrapperWithSlash {
     }
 
     function getQuorum(uint256 id) public view returns (uint256){
-        require(proposals[id].totalSupply == 0, "already resolved");
-                       
+        // sum votes, multiply by precision, divide by square rooted total supply
+        
         uint256 _quorum = 
             (proposals[id].totalForVotes.add(proposals[id].totalAgainstVotes))
             .mul(PERCENTAGE_PRECISION)
             .div(AdditionalMath.sqrt(totalSupply()));
+
         return _quorum;
     }
 }

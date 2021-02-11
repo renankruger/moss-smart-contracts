@@ -2,48 +2,21 @@ module.exports = {
   kovan: {
     gov: {
       newOwner:"0x3Ed68019F385A51FA92E6e1009C4Afa2e4Cc3e1F",
-      boostToken:"0x0270d94f776F479306C6c44CF91aA24477C85772",
-      MossTokenAddress: "0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737",
-      treasuryContract:"0xE87Ccd23a6Ab1E2473180c0541ad8A526eefDe93",
-      stableCoin: "0xf074878753c56A5B442146565675c4AB6E93AC8D",
+      boostToken:"0x8386DA0CAD75D8c890946B15E1489Cc0Aa554E2b",
+      MossTokenAddress: "0xb88085E1CBBe671228a55FBe9b6bc6c0d207e47d",
+      treasuryContract:"0x7c659F5617765F691dE442C4eC35978DDc25887c",
+      stableCoin: "0xE70d4f5C58763E2B12f92A6857E84A1827AA9527",
     },    
     pools:{
-      ALNPool:{ 
-        stakeTokenName: "ALN",
-        stakeTokenAdress: "0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737",
+      UniMco2ETHPool:{ 
+        stakeTokenName: "Uniswap LP MCO2-ETH",
+        stakeTokenAdress: "0x2a0e86c1ded4cc9a284cbcfd4e01cf22c292c2b2",
         cap: "1000000000000000000000",
-        rewardTokenAddress: "0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737",
-        start: "1602892943",
-        duration:"360",
-        rewardAmount:"100000000000000000000"
-      },
-      UNIPool:{ 
-        stakeTokenName: "UNI-ALN-LP",
-        stakeTokenAdress: "0xffb4893f44cdfcc1da93aa5a625b249c0b14452a",
-        cap: "1000000000000000000000",
-        rewardTokenAddress: "0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737",
-        start: "1603193128",
+        rewardTokenAddress: "0xb88085E1CBBe671228a55FBe9b6bc6c0d207e47d",
+        start: "1613007147",
         duration:"360000",
-        rewardAmount:"100000000000000000000"
-      },
-      UNIPool1:{ 
-        stakeTokenName: "UNI-ALN-BOOST",
-        stakeTokenAdress: "0x0bf121341276f717eb7b3dbc888e3f4e45a3dd0e",
-        cap: "1000000000000000000000",
-        rewardTokenAddress: "0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737",
-        start: "1603193128",
-        duration:"360000",
-        rewardAmount:"100000000000000000000"
-      },
-      BAL:{ 
-        stakeTokenName: "BAL-ALN-WETH",
-        stakeTokenAdress: "0x11d645e228bc87b2d208dcfe8a90b787de410d2d",
-        cap: "1000000000000000000000",
-        rewardTokenAddress: "0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737",
-        start: "1603193128",
-        duration:"360000",
-        rewardAmount:"100000000000000000000"
-      }
+        rewardAmount:"1000000000000000000000"
+      }     
     }    
   }  
 } 

@@ -10,7 +10,7 @@ task('deploy:mock-tokens', 'Deploy mock tokens to test net')
   network = await ethers.provider.getNetwork();
   
   const BoostToken = await ethers.getContractFactory('BoostToken')
-  const AlunaToken = await ethers.getContractFactory('Token')
+  const MossToken = await ethers.getContractFactory('Token')
   const Stable = await ethers.getContractFactory('Token')
 
   // compile contracts

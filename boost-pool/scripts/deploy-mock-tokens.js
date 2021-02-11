@@ -24,12 +24,12 @@ task('deploy:mock-tokens', 'Deploy mock tokens to test net')
   console.log(`Boost address: ${boostToken.address}`);
   await pressToContinue();
 
-  //Deploy Aluna
-  console.log('Deploying AlunaToken');
-  const alunaToken = await AlunaToken.deploy('ALUNA TOKEN', 'ALN', 18)
-  await alunaToken.deployed()
+  //Deploy Moss
+  console.log('Deploying MossToken');
+  const mossToken = await MossToken.deploy('MOSS TOKEN', 'MCO2', 18)
+  await mossToken.deployed()
 
-  console.log(`Aluna address: ${alunaToken.address}`);
+  console.log(`Moss address: ${mossToken.address}`);
   await pressToContinue();
 
   //Deploy Stable

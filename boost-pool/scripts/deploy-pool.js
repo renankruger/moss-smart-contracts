@@ -41,7 +41,7 @@ task('deploy:pool', 'Deploy a pool specified on --pool option')
   await bre.run("compile");
 
   // deploy pool
-  const RewardsPool = await ethers.getContractFactory('AlunaBoostPool');
+  const RewardsPool = await ethers.getContractFactory('MossBoostPool');
   
   const rewardsPool = await RewardsPool.deploy(
     new BN.from(poolSettings.cap),

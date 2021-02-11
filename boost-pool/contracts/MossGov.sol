@@ -29,7 +29,7 @@ import "./interfaces/ISwapRouter.sol";
 import "./LPTokenWrapperWithSlash.sol";
 import "./AdditionalMath.sol";
 
-contract AlunaGov is LPTokenWrapperWithSlash {
+contract MossGov is LPTokenWrapperWithSlash {
     
     using AdditionalMath for uint256;
 

@@ -31,7 +31,7 @@ import "./LPTokenWrapper.sol";
 import "./AdditionalMath.sol";
 import "@openzeppelin/contracts/math/Math.sol";
 
-contract AlunaBoostPool is LPTokenWrapper, Ownable {
+contract MossBoostPool is LPTokenWrapper, Ownable {
     
     using AdditionalMath for uint256;
     
